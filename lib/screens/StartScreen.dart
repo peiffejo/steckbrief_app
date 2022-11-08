@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:steckbrief_app/screens/Datenschutz_screen.dart';
+import 'package:steckbrief_app/screens/second_screen.dart';
+import 'package:steckbrief_app/screens/stack_screen.dart';
 
 class StartScreen extends StatelessWidget {
   const StartScreen({Key? key}) : super(key: key);
@@ -14,7 +17,20 @@ class StartScreen extends StatelessWidget {
         child: Center(
           child: Column(
             children: [
-              machZeile(text: "Steckbrief"),
+              machZeile(text: "Steckbrief Johannes"),
+              ElevatedButton(onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => second_screen()),);
+              },
+                  child: Text("Second")),
+              ElevatedButton(onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => StackScreen()),);
+              },
+                  child: Text("Stack")),
+              ElevatedButton(onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => Datenschutz_screen()),);
+              },
+                  child: Text("Datenschutz")),
+              machZeile(text: "Alter: 25"),
             ],
           ),
         ),
