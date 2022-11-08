@@ -8,13 +8,13 @@ class StartScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text("Patryk"),
+        title: Text("Johanes"),
       ),
       body: SingleChildScrollView(
         child: Center(
           child: Column(
             children: [
-              machZeile(text: "Ich will schlafen"),
+              machZeile(text: "Steckbrief"),
             ],
           ),
         ),
